@@ -31,3 +31,33 @@ colors = ["red", "blue", "yellow", "pink"]
 
 for name, color in zip(names, colors):
     print(f"{name} likes {color}")
+
+COUNTER = 0
+
+# When calling a function until a sentinel value
+def read_from_file_until_sentinel():
+    """
+    Mock function to simlulate reading from a file
+    until a sentinel of an empty-string.
+    """
+    global COUNTER
+    COUNTER += 1
+
+    if COUNTER == 1:
+        return "hello"
+    if COUNTER == 2:
+        return "world"
+
+    return ""
+
+
+for word in iter(read_from_file_until_sentinel, ""):
+    print(word)
+
+# Replace boolean variables with else statements
+# for the corresponding if statement inside of a iteration.
+for color in colors:
+    if color == "green":
+        break
+else:
+    print("Green not in colors!")

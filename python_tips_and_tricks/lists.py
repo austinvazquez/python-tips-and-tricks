@@ -1,5 +1,5 @@
 """
-Common tips and tricks dealing with lists.
+Common tips and tricks with lists.
 """
 
 # To sort a collection
